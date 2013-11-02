@@ -1,0 +1,10 @@
+PIL==1.1.7
+distribute==0.6.35
+git-remote-helpers==0.1.0
+lxml==3.1.1
+mitmproxy==0.8.1
+pyOpenSSL==0.13
+pyasn1==0.1.6
+urwid==1.0.1
+vboxapi==1.0
+wsgiref==0.1.2

@@ -1,0 +1,41 @@
+[user]
+  name = Takatoshi Maeda
+  email = me@tmd.tw
+[core]
+  quotepath = false
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  excludesfile = ~/.gitignore_global
+  editor = vim
+[color]
+  ui = true
+[color "branch"]
+  current = yellow black
+  local = yellow
+  remote = magenta
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red reverse
+  new = green reverse
+  whitespace = white reverse
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan reverse
+  branch = magenta
+[alias]
+  st = status
+  sh = show
+  co = checkout
+  cm = commit
+  ca = commit -a
+  br = branch
+  mg = merge
+  ps = push
+  pl = pull
+  i = issue
+  pr = pull-request
+  gh = browse
+  f = flow
+[github]
+  user = TakatoshiMaeda

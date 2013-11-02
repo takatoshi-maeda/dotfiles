@@ -1,0 +1,6 @@
+[submodule ".vim/bundle/vundle"]
+	path = .vim/bundle/vundle
+	url = git://github.com/gmarik/vundle.git
+[submodule ".zsh.d/bundle/packages/hub-zsh-completion"]
+	path = .zsh.d/bundle/packages/hub-zsh-completion
+	url = git@github.com:glidenote/hub-zsh-completion.git

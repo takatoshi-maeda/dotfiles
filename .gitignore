@@ -1,0 +1,6 @@
+doc/tags*
+.vim/bundle/
+.vim/bundle~/
+.vim/undo/
+.chef/syntax_check_cache
+.bundle
