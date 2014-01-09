@@ -2,12 +2,19 @@
 cd $(dirname $0)
 for dotfile in .?*
 do
-    if [ $dotfile != '..' ] && [ $dotfile != '.git' ]
-    then
-        name=`echo $dotfile | sed -e "s/-/\//"`
-        name=`echo $name | sed -e "s/+/-/"`
-        ln -fs "$PWD/$dotfile" "$HOME/$name"
-    fi
+  if [ $dotfile != '..' ] && [ $dotfile != '.git' ]
+  then
+    name=`echo $dotfile | sed -e "s/-/\//"`
+    name=`echo $name | sed -e "s/+/-/"`
+    ln -fs "$PWD/$dotfile" "$HOME/$name"
+  fi
 done
-
 ln -fs "$PWD/Brewfile" "$HOME/Brewfile"
+
+# Font Install
+if [ -e "$HOME/Library/Fonts/Consolas for Powerline.ttf" ]; then
+  wget https://dl.dropboxusercontent.com/u/34772227/fonts.zip -O /tmp/fonts.zip
+  unzip -o /tmp/fonts.zip -d /tmp/
+  cp -vf /tmp/fonts/*.otf $HOME/Library/Fonts/
+  cp -vf /tmp/fonts/*.ttf $HOME/Library/Fonts/
+fi

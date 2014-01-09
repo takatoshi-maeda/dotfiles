@@ -1,6 +1,7 @@
 tap 'phinze/homebrew-cask'
 tap 'TakatoshiMaeda/homebrew-mycask'
 
+brew 'fontforge'
 brew 'go'
 brew 'brew-cask'
 brew 'csshx'

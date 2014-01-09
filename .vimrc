@@ -165,6 +165,9 @@ NeoBundle 'osyo-manga/vim-over'
 " vimでTodo管理。とりあえずReminder.app使ってるし...
 NeoBundle "fuenor/qfixhowm"
 
+NeoBundle 'alpaca-tc/alpaca_powertabline'
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+
 set runtimepath+=~/.vim/
 runtime! conf.d/*.vim
 
