@@ -34,7 +34,7 @@ for n in range(1, 9)
 endfor
 " t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
 
-map <silent> [Tag]c :tablast <bar> tabnew<CR>
+map <silent> [Tag]t :tablast <bar> tabnew<CR>
 " tc 新しいタブを一番右に作る
 map <silent> [Tag]x :tabclose<CR>
 " tx タブを閉じる

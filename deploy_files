@@ -9,3 +9,5 @@ do
         ln -fs "$PWD/$dotfile" "$HOME/$name"
     fi
 done
+
+ln -fs "$PWD/Brewfile" "$HOME/Brewfile"

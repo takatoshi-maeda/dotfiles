@@ -89,3 +89,11 @@ install_default_gems() {
     done < "${HOME}/.rbenv/default-gems"
   fi
 }
+
+brew(){
+  if [ "$1" = "install" ] &&  [ "$2" = "" ]; then
+    brewdle --trace install $HOME/Brewfile
+    return
+  fi
+  /usr/local/bin/brew $*
+}

@@ -157,6 +157,9 @@ function! s:bundle.hooks.on_source(bundle)
   smap <silent><C-F> <Plug>(neosnippet_expand_or_jump)
 endfunction
 
+" 置換
+NeoBundle 'osyo-manga/vim-over'
+
 " vimでTodo管理。とりあえずReminder.app使ってるし...
 "NeoBundle "fuenor/qfixhowm"
 

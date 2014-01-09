@@ -1,4 +1,6 @@
 bundler
+brewdler
+
 gem-browse
 gemedit
 rubocop
