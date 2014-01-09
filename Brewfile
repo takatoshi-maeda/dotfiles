@@ -1,9 +1,10 @@
-#tap "phinze/homebrew-cask'
+tap 'phinze/homebrew-cask'
+tap 'TakatoshiMaeda/homebrew-mycask'
 
 brew 'go'
-brew "brew-cask"
-brew "csshx"
-brew "erlang"
+brew 'brew-cask'
+brew 'csshx'
+brew 'erlang'
 brew "git"
 brew "git-flow"
 brew "go"
@@ -74,10 +75,10 @@ cask "virtualbox"
 cask "vagrant"
 cask "wireshark"
 
-#cask "bettersnaptool"
 #cask "pivotal-booster"
 #cask "line"
-#cask "kobito"
-#cask "kkbox"
+cask "kobito"
 #cask "key-remap-4-macbook"
-#cask "elastic-fox"
+cask "elastic-fox-ec2tag"
+cask "iam-fox"
+cask "r53-fox"

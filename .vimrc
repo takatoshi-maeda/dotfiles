@@ -11,8 +11,10 @@ endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
 
+syntax on
+
 " Tools
-NeoBundle 'Shougo/vimproc', {
+NeoBundleLazy 'Shougo/vimproc', {
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',
       \     'cygwin' : 'make -f make_cygwin.mak',
@@ -101,7 +103,7 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle "AndrewRadev/switch.vim"
 
 " 自動補完
-"NeoBundle "supermomonga/neocomplete-rsense.vim"
+NeoBundle "supermomonga/neocomplete-rsense.vim"
 NeoBundleLazy "Shougo/neocomplete.vim", {
       \ 'autoload' : {
       \   'insert' : 1,
@@ -161,9 +163,9 @@ endfunction
 NeoBundle 'osyo-manga/vim-over'
 
 " vimでTodo管理。とりあえずReminder.app使ってるし...
-"NeoBundle "fuenor/qfixhowm"
+NeoBundle "fuenor/qfixhowm"
 
-"set runtimepath+=~/.vim/
+set runtimepath+=~/.vim/
 runtime! conf.d/*.vim
 
 syntax on
