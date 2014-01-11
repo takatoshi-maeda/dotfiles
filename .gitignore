@@ -5,3 +5,4 @@ doc/tags*
 .chef/syntax_check_cache
 .bundle
 .vim/.netrwhist
+.zsh.d/override
