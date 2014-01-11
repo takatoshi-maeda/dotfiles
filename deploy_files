@@ -1,5 +1,6 @@
 #!/bin/sh
 cd $(dirname $0)
+
 for dotfile in .?*
 do
   if [ $dotfile != '..' ] && [ $dotfile != '.git' ]
@@ -9,6 +10,11 @@ do
     ln -fsn "$PWD/$dotfile" "$HOME/$name"
   fi
 done
+
+# disable override
+if [ -e "$HOME/.zsh.d/config/override" ]; then
+  rm $HOME/.zsh.d/config/override
+fi
 
 for brewfile in Brewfile?*
 do
