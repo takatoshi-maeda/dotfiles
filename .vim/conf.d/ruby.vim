@@ -71,3 +71,6 @@ au BufNewFile,BufRead [Bb]uildfile    set filetype=ruby
 
 " Appraisal
 au BufNewFile,BufRead Appraisals    set filetype=ruby
+
+" HomeBrew
+au BufNewFile,BufRead Brewfile    set filetype=ruby

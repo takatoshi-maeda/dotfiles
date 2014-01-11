@@ -92,7 +92,7 @@ install_default_gems() {
 
 brew(){
   if [ "$1" = "install" ] &&  [ "$2" = "" ]; then
-    brewdle --trace install $HOME/Brewfile
+    ADDITIONAL_BREWFILE=middleware,ext_macapps brewdle --trace install $HOME/Brewfile
     return
   fi
   /usr/local/bin/brew $*

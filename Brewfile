@@ -1,7 +1,6 @@
 tap 'phinze/homebrew-cask'
 tap 'TakatoshiMaeda/homebrew-mycask'
 
-brew 'fontforge'
 brew 'go'
 brew 'brew-cask'
 brew 'csshx'
@@ -10,28 +9,14 @@ brew "git"
 brew "git-flow"
 brew "go"
 brew "hub"
-brew "imagemagick"
 brew "jq"
 brew "lua"
 brew "lynx"
 brew "macvim"
-brew "mecab"
-brew "mecab-ipadic"
-brew "mongodb"
-brew "msgpack"
-brew "mysql"
-brew "nginx"
-brew "openssl"
 brew "python"
-brew "readline"
-brew "redis"
-brew "rrd-tool"
 brew "rsense"
 brew "rsync"
-brew "ruby-build"
 brew "scala"
-brew "sqlite"
-brew "http://toolbelt.treasuredata.com/brew/td-agent.rb"
 brew "tig"
 brew "tmux"
 brew "tree"
@@ -42,7 +27,6 @@ cask "alfred"
 cask "android-file-transfer"
 cask "android-studio"
 cask "apns-pusher"
-cask "arduino"
 cask "caffeine"
 cask "chromium"
 cask "chromatic"
@@ -50,8 +34,6 @@ cask "clipmenu"
 cask "rest-client"
 cask "crashlytics"
 cask "cyberduck"
-cask "dropbox"
-cask "dropbox-encore"
 cask "eclipse-platform"
 cask "evernote"
 cask "fluid"
@@ -69,7 +51,6 @@ cask "mou"
 cask "mysql-workbench"
 cask "robomongo"
 cask "sequel-pro"
-cask "skype"
 cask "sublime-text"
 cask "testflight"
 cask "virtualbox"
@@ -77,9 +58,14 @@ cask "vagrant"
 cask "wireshark"
 
 #cask "pivotal-booster"
-#cask "line"
 cask "kobito"
 #cask "key-remap-4-macbook"
 cask "elastic-fox-ec2tag"
 cask "iam-fox"
 cask "r53-fox"
+
+if ENV["ADDITIONAL_BREWFILE"]
+  ENV["ADDITIONAL_BREWFILE"].split(',').each do |env|
+    self.instance_eval open(File.join(File.dirname(__FILE__), "Brewfile.#{env}")).read
+  end
+end
