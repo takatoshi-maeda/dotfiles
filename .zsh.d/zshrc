@@ -2,3 +2,10 @@ for config_file in ~/.zsh.d/config/*.zsh
 do
   source "$config_file"
 done
+
+if [ -e $HOME/.zsh.d/override/ ]; then
+  for config_file in ~/.zsh.d/override/*.zsh
+  do
+    source "$config_file"
+  done
+fi
