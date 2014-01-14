@@ -16,7 +16,7 @@ if [ -e "$HOME/.zsh.d/config/override" ]; then
   rm $HOME/.zsh.d/config/override
 fi
 
-for brewfile in Brewfile?*
+for brewfile in Brewfile*
 do
   ln -fs "$PWD/$brewfile" "$HOME/$brewfile"
 done
