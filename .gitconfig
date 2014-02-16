@@ -40,3 +40,5 @@
   f = flow
 [github]
   user = TakatoshiMaeda
+[include]
+  path = .gitconfig.local
