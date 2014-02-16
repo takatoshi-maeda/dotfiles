@@ -144,20 +144,20 @@ function! s:bundle.hooks.on_source(bundle)
 endfunction
 
 " snippet管理
-NeoBundleLazy "Shougo/neosnippet.vim", {
-      \ 'autoload' : {
-      \   'insert' : 1,
-      \ }}
-let s:bundle = neobundle#get('neosnippet.vim')
-function! s:bundle.hooks.on_source(bundle)
-  let s:default_snippet = '~/.vim/bundle/neosnippet.vim/autoload/neosnippet/snippets'
-  let s:my_snippet = '~/.vim/neosnippet'
-  let g:neosnippet#snippets_directory = s:default_snippet . ',' . s:my_snippet
-  imap <silent><C-F> <Plug>(neosnippet_expand_or_jump)
-  inoremap <silent><C-U> <ESC>:<C-U>Unite snippet<CR>
-  nnoremap <silent><Space>e :<C-U>NeoSnippetEdit -split<CR>
-  smap <silent><C-F> <Plug>(neosnippet_expand_or_jump)
-endfunction
+"NeoBundleLazy "Shougo/neosnippet.vim", {
+"      \ 'autoload' : {
+"      \   'insert' : 1,
+"      \ }}
+"let s:bundle = neobundle#get('neosnippet.vim')
+"function! s:bundle.hooks.on_source(bundle)
+"  let s:default_snippet = '~/.vim/bundle/neosnippet.vim/autoload/neosnippet/snippets'
+"  let s:my_snippet = '~/.vim/neosnippet'
+"  let g:neosnippet#snippets_directory = s:my_snippet
+"  imap <silent><C-F> <Plug>(neosnippet_expand_or_jump)
+"  inoremap <silent><C-U> <ESC>:<C-U>Unite snippet<CR>
+"  nnoremap <silent><Space>e :<C-U>NeoSnippetEdit -split<CR>
+"  smap <silent><C-F> <Plug>(neosnippet_expand_or_jump)
+"endfunction
 
 " 置換
 NeoBundle 'osyo-manga/vim-over'

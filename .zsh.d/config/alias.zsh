@@ -8,6 +8,7 @@ alias vi="vim"
 alias ci="vim"
 alias copy="pbcopy"
 alias paste="pbpaste"
+alias g="git"
 
 alias zshload="source ~/.zshrc"
 alias mou="/Applications/Mou.app/Contents/MacOS/Mou"
