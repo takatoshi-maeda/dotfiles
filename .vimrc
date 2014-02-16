@@ -29,14 +29,28 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'mattn/benchvimrc-vim'
 
 " Ruby
-"NeoBundle "vim-ruby/vim-ruby"
+NeoBundle "tpope/vim-rails"
+map rm :Rmodel<CR>
+map rc :Rcontroller<CR>
+map rv :Rview<CR>
+map rp :Rpreview<CR>
+map rr :R<CR>
+map ra :A<CR>
+NeoBundleLazy 'tpope/vim-dispatch', { 'autoload' : {
+      \ 'commands' : ['Dispatch', 'FocusDispatch', 'Start']
+      \ }}
 " rspecをvimで実行して、他ウインドウにdispatchしてくれる
 NeoBundleLazy 'taichouchou2/neorspec.vim', {
       \ 'depends' : ['tpope/vim-rails', 'tpope/vim-dispatch'],
       \ 'autoload' : {
       \   'commands' : ['RSpec', 'RSpecAll', 'RSpecCurrent', 'RSpecNearest', 'RSpecRetry']
       \ }}
-let g:rspec_command = "Dispatch bundle exec rspec {spec}"
+map cr  :RSpecCurrent<CR>
+map nr :RSpecNearest<CR>
+map lr :RSpecRetry<CR>
+map ar :RSpecAll<CR>
+map r :RSpec<Space>
+let g:neorspec_command = "Dispatch bundle exec rspec {spec}"
 
 " rubyのコーディング規約チェッカ
 NeoBundle "ngmy/vim-rubocop"
@@ -48,7 +62,6 @@ NeoBundle "tpope/vim-endwise"
 NeoBundle "rubycomplete.vim"
 
 "  Ruby on Rails
-"NeoBundle "tpope/vim-rails"
 "let g:rails_default_file='config/database.yml'
 "let g:rails_level = 4
 "let g:rails_mappings=1
