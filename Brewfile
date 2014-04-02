@@ -1,5 +1,6 @@
 tap 'phinze/homebrew-cask'
 tap 'TakatoshiMaeda/homebrew-mycask'
+tap 'thoughtbot/formulae'
 
 brew 'go'
 brew 'brew-cask'
@@ -22,6 +23,8 @@ brew "tmux"
 brew "tree"
 brew "wget"
 brew "zsh"
+brew "gitsh"
+brew "nkf"
 
 cask "alfred"
 cask "android-file-transfer"
