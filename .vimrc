@@ -12,6 +12,7 @@ endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 syntax on
+set lazyredraw
 
 " Tools
 NeoBundleLazy 'Shougo/vimproc', {
@@ -23,19 +24,27 @@ NeoBundleLazy 'Shougo/vimproc', {
       \    },
       \ }
 NeoBundle "Shougo/unite.vim"
+NeoBundle "basyura/unite-rails"
+
+let g:unite_enable_start_insert = 1
+let g:unite_enable_split_vertically = 0
+let g:unite_winwidth = 40
+" nnoremap <silent><C-e> :<C-u>Unite file_mru buffer<CR>
+nnoremap <silent><F1> :Unite rails/model<CR>
+nnoremap <silent><F2> :Unite rails/controller<CR>
+nnoremap <silent><F3> :Unite rails/view<CR>
+nnoremap <silent><F4> :Unite rails/helper<CR>
+nnoremap <silent><F5> :Unite rails/javascript<CR>
+nnoremap <silent><F6> :Unite rails/stylesheet<CR>
+nnoremap <silent><F7> :Unite rails/lib<CR>
+nnoremap <silent><F10> :Unite file file_mru file/new<CR>
+
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'mattn/benchvimrc-vim'
 
 " Ruby
-NeoBundle "tpope/vim-rails"
-map rm :Rmodel<CR>
-map rc :Rcontroller<CR>
-map rv :Rview<CR>
-map rp :Rpreview<CR>
-map rr :R<CR>
-map ra :A<CR>
 NeoBundleLazy 'tpope/vim-dispatch', { 'autoload' : {
       \ 'commands' : ['Dispatch', 'FocusDispatch', 'Start']
       \ }}
@@ -49,7 +58,7 @@ map cr  :RSpecCurrent<CR>
 map nr :RSpecNearest<CR>
 map lr :RSpecRetry<CR>
 map ar :RSpecAll<CR>
-map r :RSpec<Space>
+map test :RSpec<Space>
 let g:neorspec_command = "Dispatch bundle exec rspec {spec}"
 
 " rubyのコーディング規約チェッカ
@@ -60,27 +69,6 @@ NeoBundle "tpope/vim-endwise"
 
 " ruby用自動補完
 NeoBundle "rubycomplete.vim"
-
-"  Ruby on Rails
-"let g:rails_default_file='config/database.yml'
-"let g:rails_level = 4
-"let g:rails_mappings=1
-"let g:rails_modelines=0
-"let g:rails_url='http://localhost:3000'
-"function! SetUpRailsSetting()
-"  nnoremap <buffer><Space>r :R<CR>
-"  nnoremap <buffer><Space>a :A<CR>
-"  nnoremap <buffer><Space>m :Rmodel<Space>
-"  nnoremap <buffer><Space>c :Rcontroller<Space>
-"  nnoremap <buffer><Space>v :Rview<Space>
-"  nnoremap <buffer><Space>p :Rpreview<CR>
-"endfunction 
-"aug MyAutoCmd
-"  au User Rails call SetUpRailsSetting()
-"aug END
-"aug RailsDictSetting
-"  au!
-"aug END
 
 "  slim用シンタックス
 NeoBundle 'slim-template/vim-slim'
