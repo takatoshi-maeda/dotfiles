@@ -2,6 +2,10 @@ au BufNewFile,BufRead *.go set tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.go set filetype=go
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
+if $GOROOT != ''
+  set rtp+=$GOROOT/misc/vim
+endif
+
 if $GOPATH != ''
   execute "set rtp+=".globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
   execute "set runtimepath+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
