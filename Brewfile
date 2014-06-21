@@ -1,8 +1,11 @@
 tap 'phinze/homebrew-cask'
 tap 'TakatoshiMaeda/homebrew-mycask'
 tap 'thoughtbot/formulae'
+tap 'peco/peco'
+tap 'homebrew/binary'
 
 brew 'go'
+brew 'peco'
 brew 'brew-cask'
 brew 'csshx'
 brew 'erlang'
@@ -25,6 +28,9 @@ brew "wget"
 brew "zsh"
 brew "gitsh"
 brew "nkf"
+brew "boot2docker"
+brew "packer"
+brew "nmap"
 
 cask "alfred"
 cask "android-file-transfer"
