@@ -21,6 +21,8 @@ do
   ln -fs "$PWD/$brewfile" "$HOME/$brewfile"
 done
 
+go_setup
+
 # Font Install
 if [ ! -e "$HOME/Library/Fonts/Consolas for Powerline.ttf" ]; then
   wget https://dl.dropboxusercontent.com/u/34772227/fonts.zip -O /tmp/fonts.zip

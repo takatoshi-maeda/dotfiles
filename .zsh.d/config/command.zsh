@@ -97,3 +97,9 @@ brew(){
   fi
   /usr/local/bin/brew $*
 }
+
+p() { peco | while read LINE; do $@ $LINE; done }
+
+go_setup() {
+  go get github.com/motemen/ghq
+}
