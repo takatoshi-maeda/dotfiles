@@ -21,12 +21,16 @@ do
   ln -fs "$PWD/$brewfile" "$HOME/$brewfile"
 done
 
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+
 go_setup
 
 # Font Install
-if [ ! -e "$HOME/Library/Fonts/Consolas for Powerline.ttf" ]; then
-  wget https://dl.dropboxusercontent.com/u/34772227/fonts.zip -O /tmp/fonts.zip
-  unzip -o /tmp/fonts.zip -d /tmp/
-  cp -vf /tmp/fonts/*.otf $HOME/Library/Fonts/
-  cp -vf /tmp/fonts/*.ttf $HOME/Library/Fonts/
+if [ `uname -s` == 'Darwin' ]; then
+  if [ ! -e "$HOME/Library/Fonts/Consolas for Powerline.ttf" ]; then
+    wget https://dl.dropboxusercontent.com/u/34772227/fonts.zip -O /tmp/fonts.zip
+    unzip -o /tmp/fonts.zip -d /tmp/
+    cp -vf /tmp/fonts/*.otf $HOME/Library/Fonts/
+    cp -vf /tmp/fonts/*.ttf $HOME/Library/Fonts/
+  fi
 fi
