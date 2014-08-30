@@ -44,6 +44,13 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'mattn/benchvimrc-vim'
 
+" Git
+hi SignColumn guibg=0 ctermbg=0
+NeoBundle "airblade/vim-gitgutter"
+let g:gitgutter_enabled = 1
+nnoremap <silent> gg :<C-u>GitGutterToggle<CR>
+nnoremap <silent> gh :<C-u>GitGutterLineHighlightsToggle<CR>
+
 " Ruby
 NeoBundleLazy 'tpope/vim-dispatch', { 'autoload' : {
       \ 'commands' : ['Dispatch', 'FocusDispatch', 'Start']
