@@ -11,11 +11,13 @@ brew 'csshx'
 brew 'erlang'
 brew "git"
 brew "git-flow"
+brew "hg"
 brew "go"
 brew "hub"
 brew "jq"
 brew "lua"
 brew "lynx"
+brew "vim"
 brew "macvim"
 brew "python"
 brew "rsense"

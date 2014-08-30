@@ -42,3 +42,5 @@
   user = TakatoshiMaeda
 [include]
   path = .gitconfig.local
+[push]
+	default = matching
