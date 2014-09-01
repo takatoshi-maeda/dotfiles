@@ -17,7 +17,7 @@ function gem(){
 
 # alias
 alias be="noglob bundle exec"
-alias bi="bundle install --path=./.bundle"
+alias bi="bundle install --path=./.bundle -j 4"
 alias pa="bundle exec padrino"
 alias r="bundle exec rails"
 alias cap="bundle exec cap"
