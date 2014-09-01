@@ -7,4 +7,5 @@ doc/tags*
 .vim/.netrwhist
 .zsh.d/config/override
 .gitconfig.local
+.gitignore.local
 .vim/conf.d/override
