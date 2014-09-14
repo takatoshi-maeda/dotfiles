@@ -13,6 +13,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 syntax on
 set lazyredraw
+set clipboard=unnamed,autoselect
 
 " Tools
 NeoBundleLazy 'Shougo/vimproc', {
@@ -39,11 +40,6 @@ nnoremap <silent><F6> :Unite rails/stylesheet<CR>
 nnoremap <silent><F7> :Unite rails/lib<CR>
 nnoremap <silent><F10> :Unite file file_mru file/new<CR>
 
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'mattn/benchvimrc-vim'
-
 " Git
 hi SignColumn guibg=0 ctermbg=0
 NeoBundle "airblade/vim-gitgutter"
@@ -52,34 +48,14 @@ nnoremap <silent> gg :<C-u>GitGutterToggle<CR>
 nnoremap <silent> gh :<C-u>GitGutterLineHighlightsToggle<CR>
 
 " Ruby
-NeoBundleLazy 'tpope/vim-dispatch', { 'autoload' : {
-      \ 'commands' : ['Dispatch', 'FocusDispatch', 'Start']
-      \ }}
-" rspecをvimで実行して、他ウインドウにdispatchしてくれる
-NeoBundleLazy 'taichouchou2/neorspec.vim', {
-      \ 'depends' : ['tpope/vim-rails', 'tpope/vim-dispatch'],
-      \ 'autoload' : {
-      \   'commands' : ['RSpec', 'RSpecAll', 'RSpecCurrent', 'RSpecNearest', 'RSpecRetry']
-      \ }}
-map cr  :RSpecCurrent<CR>
-map nr :RSpecNearest<CR>
-map lr :RSpecRetry<CR>
-map ar :RSpecAll<CR>
-map test :RSpec<Space>
-let g:neorspec_command = "Dispatch bundle exec rspec {spec}"
-
 " rubyのコーディング規約チェッカ
 NeoBundle "ngmy/vim-rubocop"
 
 " do ~ end等のblockを自動で入力してくれる
 NeoBundle "tpope/vim-endwise"
 
-" ruby用自動補完
-NeoBundle "rubycomplete.vim"
-
 "  slim用シンタックス
 NeoBundle 'slim-template/vim-slim'
-NeoBundle 'yuku-t/vim-ref-ri'
 
 " scsssyntax
 NeoBundle 'cakebaker/scss-syntax.vim'
@@ -92,26 +68,10 @@ NeoBundle 'kchmck/vim-coffee-script'
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
 
-"  jst,ejs syntax
-NeoBundle "briancollins/vim-jst"
-
-
-" ProjectManage
-" カレントディレクトリをツリー表示してくれる
-NeoBundle "Shougo/vimfiler"
-
-
 " syntax
 " markdown用のsyntax
 NeoBundle 'tpope/vim-markdown'
 
-
-" input optimize
-" 文字列をトグル変更する
-NeoBundle "AndrewRadev/switch.vim"
-
-" 自動補完
-NeoBundle "supermomonga/neocomplete-rsense.vim"
 NeoBundleLazy "Shougo/neocomplete.vim", {
       \ 'autoload' : {
       \   'insert' : 1,
@@ -151,33 +111,21 @@ function! s:bundle.hooks.on_source(bundle)
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags)
 endfunction
 
-" snippet管理
-"NeoBundleLazy "Shougo/neosnippet.vim", {
-"      \ 'autoload' : {
-"      \   'insert' : 1,
-"      \ }}
-"let s:bundle = neobundle#get('neosnippet.vim')
-"function! s:bundle.hooks.on_source(bundle)
-"  let s:default_snippet = '~/.vim/bundle/neosnippet.vim/autoload/neosnippet/snippets'
-"  let s:my_snippet = '~/.vim/neosnippet'
-"  let g:neosnippet#snippets_directory = s:my_snippet
-"  imap <silent><C-F> <Plug>(neosnippet_expand_or_jump)
-"  inoremap <silent><C-U> <ESC>:<C-U>Unite snippet<CR>
-"  nnoremap <silent><Space>e :<C-U>NeoSnippetEdit -split<CR>
-"  smap <silent><C-F> <Plug>(neosnippet_expand_or_jump)
-"endfunction
+" golang
+NeoBundle 'fatih/vim-go'
+let g:go_fmt_autosave = 1
+let g:gofmt_command = 'goimports'
+let g:go_highlight_extra_types = 1
+let g:go_highlight_space_tab_error = 1
+let g:go_highlight_operators = 1
+
+NeoBundle 'scrooloose/syntastic'
 
 " 置換
 NeoBundle 'osyo-manga/vim-over'
 
-" vimでTodo管理。とりあえずReminder.app使ってるし...
-"NeoBundle "fuenor/qfixhowm"
-
 NeoBundle 'alpaca-tc/alpaca_powertabline'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
-
-NeoBundle 'jnwhiteh/vim-golang'
-NeoBundle 'scrooloose/syntastic'
 
 set runtimepath+=~/.vim/
 
