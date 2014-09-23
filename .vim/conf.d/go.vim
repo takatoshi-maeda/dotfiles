@@ -8,3 +8,6 @@ if $GOPATH != ''
 endif
 
 au BufNewFile,BufRead *.go  set filetype=go
+
+nmap 1 otrack := l.Start(r, map[string]string{}<Right>)<Esc>^
+nmap 2 otrack <- time.Now()<Esc>^

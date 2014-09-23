@@ -111,6 +111,8 @@ function! s:bundle.hooks.on_source(bundle)
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags)
 endfunction
 
+NeoBundleLazy "rhysd/vim-operator-surround"
+
 " golang
 NeoBundle 'fatih/vim-go'
 let g:go_fmt_autosave = 1
