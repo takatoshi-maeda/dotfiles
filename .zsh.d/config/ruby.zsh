@@ -17,7 +17,6 @@ function gem(){
 
 # alias
 alias be="noglob bundle exec"
-alias bi="bundle install --path=./.bundle -j 4"
 alias pa="bundle exec padrino"
 alias r="bundle exec rails"
 alias cap="bundle exec cap"
@@ -25,3 +24,13 @@ alias rake="noglob rake"
 alias berake="bundle exec rake"
 alias sp="bundle exec spring"
 alias k="bundle exec kitchen"
+
+bi(){
+  bundle_ruby_version=`ruby -e 'puts "#{RUBY_VERSION}#{RUBY_PATCHLEVEL.nil? ? "" : "-p#{RUBY_PATCHLEVEL.to_s}"}"'`
+  bundle install -j 4 --path=./.bundle/$bundle_ruby_version
+}
+
+bu(){
+  bundle_ruby_version=`ruby -e 'puts "#{RUBY_VERSION}#{RUBY_PATCHLEVEL.nil? ? "" : "-p#{RUBY_PATCHLEVEL.to_s}"}"'`
+  bundle update -j 4 --path=./.bundle/$ruby_version
+}

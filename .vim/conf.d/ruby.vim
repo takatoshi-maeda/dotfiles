@@ -4,7 +4,7 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 
-let g:syntastic_ruby_checkers = ['rubocop']
+" let g:syntastic_ruby_checkers = ['rubocop']
 
 au BufNewFile,BufRead *.rhtml set tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.erb set tabstop=2 shiftwidth=2
@@ -34,3 +34,5 @@ au BufNewFile,BufRead Puppetfile    set filetype=ruby
 au BufNewFile,BufRead [Bb]uildfile    set filetype=ruby
 au BufNewFile,BufRead Appraisals    set filetype=ruby
 au BufNewFile,BufRead Brewfile    set filetype=ruby
+au BufNewFile,BufRead Schemafile  set filetype=ruby
+au BufNewFile,BufRead *.schema    set filetype=ruby

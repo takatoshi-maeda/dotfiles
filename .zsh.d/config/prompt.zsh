@@ -36,5 +36,4 @@ function rprompt-git-current-branch {
 
 RPROMPT='`rprompt-git-current-branch`'
 
-PROMPT="%F{067}[${USER}@${HOST%%.*} %1~]%(!.#.$)%f "
-
+PROMPT="%F{067}%3~ >>%f "

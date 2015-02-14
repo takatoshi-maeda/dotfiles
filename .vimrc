@@ -49,7 +49,8 @@ nnoremap <silent> gh :<C-u>GitGutterLineHighlightsToggle<CR>
 
 " Ruby
 " rubyのコーディング規約チェッカ
-NeoBundle "ngmy/vim-rubocop"
+" NeoBundle "ngmy/vim-rubocop"
+" let g:vimrubocop_config = '~/.rubocop.yml'
 
 " do ~ end等のblockを自動で入力してくれる
 NeoBundle "tpope/vim-endwise"
@@ -68,10 +69,26 @@ NeoBundle 'kchmck/vim-coffee-script'
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
 
+"  jst,ejs syntax
+NeoBundle "briancollins/vim-jst"
+
+" NeoBundle 'joker1007/vim-ruby-heredoc-syntax'
+NeoBundle "Shougo/context_filetype.vim"
+
+
+" ProjectManage
+" カレントディレクトリをツリー表示してくれる
+NeoBundle "Shougo/vimfiler"
+
+
 " syntax
 " markdown用のsyntax
 NeoBundle 'tpope/vim-markdown'
+NeoBundle 'joker1007/vim-markdown-quote-syntax'
 
+" input optimize
+" 文字列をトグル変更する
+NeoBundle "AndrewRadev/switch.vim"
 NeoBundleLazy "Shougo/neocomplete.vim", {
       \ 'autoload' : {
       \   'insert' : 1,
@@ -128,6 +145,10 @@ NeoBundle 'osyo-manga/vim-over'
 
 NeoBundle 'alpaca-tc/alpaca_powertabline'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+
+NeoBundle 'jnwhiteh/vim-golang'
+NeoBundle 'nginx.vim'
+NeoBundle 'scrooloose/syntastic'
 
 set runtimepath+=~/.vim/
 

@@ -25,7 +25,7 @@ aes(){
   fi
 }
 
-dotfiles(){
+dotfile(){
   CUR_DIR=`pwd`
   cd $HOME/config/dotfiles
   if [ $1 = "move" ]; then

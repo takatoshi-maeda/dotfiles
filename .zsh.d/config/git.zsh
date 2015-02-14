@@ -1,5 +1,7 @@
 # hubコマンド
 alias git="hub"
+alias -g br='branch -a | peco | head -n 1 | sed -e "s/^\*\s*//g" | xargs git co'
+
 #compdef git git-cvsserver git-receive-pack git-upload-archive git-upload-pack git-shell gitk tig
 
 # Some parts of this completion's behaviour are configurable:
