@@ -30,15 +30,14 @@ NeoBundle "basyura/unite-rails"
 let g:unite_enable_start_insert = 1
 let g:unite_enable_split_vertically = 0
 let g:unite_winwidth = 40
-" nnoremap <silent><C-e> :<C-u>Unite file_mru buffer<CR>
-nnoremap <silent><F1> :Unite rails/model<CR>
-nnoremap <silent><F2> :Unite rails/controller<CR>
-nnoremap <silent><F3> :Unite rails/view<CR>
-nnoremap <silent><F4> :Unite rails/helper<CR>
-nnoremap <silent><F5> :Unite rails/javascript<CR>
-nnoremap <silent><F6> :Unite rails/stylesheet<CR>
-nnoremap <silent><F7> :Unite rails/lib<CR>
-nnoremap <silent><F10> :Unite file file_mru file/new<CR>
+
+nnoremap <Space><Space> :<C-u>Unite file_rec/git<CR>
+
+" NeoBundle 'kien/ctrlp.vim'
+" let g:ctrlp_use_migemo = 1
+" let g:ctrlp_clear_cache_on_exit = 0   " 終了時キャッシュをクリアしない
+" let g:ctrlp_mruf_max            = 500 " MRUの最大記録数
+" let g:ctrlp_open_new_file       = 1   " 新規ファイル作成時にタブで開く
 
 " Git
 hi SignColumn guibg=0 ctermbg=0

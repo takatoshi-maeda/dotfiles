@@ -103,3 +103,7 @@ p() { peco | while read LINE; do $@ $LINE; done }
 go_setup() {
   go get github.com/motemen/ghq
 }
+
+my_ip() {
+  ipconfig getifaddr en0
+}
