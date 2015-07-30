@@ -13,3 +13,6 @@ alias gq="ghq"
 
 alias zshload="source ~/.zshrc"
 alias mou="/Applications/Mou.app/Contents/MacOS/Mou"
+
+alias work="open focus://focus"
+alias rest="open focus://unfocus"

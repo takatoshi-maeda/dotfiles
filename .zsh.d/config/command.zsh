@@ -107,3 +107,11 @@ go_setup() {
 my_ip() {
   ipconfig getifaddr en0
 }
+
+td-exec() {
+  bundle exec td query -o $3 -P -2 -w -d $1 -q $2 -T presto -f csv
+  echo ''
+  echo '---------------------------'
+  echo
+  head -n 20 $3
+}

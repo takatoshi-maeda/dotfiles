@@ -3,6 +3,7 @@ filetype indent on
 filetype plugin on
 
 set nocompatible
+set noswapfile
 
 if has('vim_starting')
   set nocompatible
