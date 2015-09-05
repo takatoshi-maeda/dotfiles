@@ -23,7 +23,14 @@ done
 
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
+source ~/.zshrc
+
 go_setup
+
+brew install zsh
+brew install ghq
+brew install hub
+brew install direnv
 
 # Font Install
 if [ `uname -s` == 'Darwin' ]; then

@@ -115,3 +115,7 @@ td-exec() {
   echo
   head -n 20 $3
 }
+
+mysql-forward() {
+  /usr/bin/ssh -v -N -o ControlMaster=no -o ExitOnForwardFailure=yes -o ConnectTimeout=10 -o NumberOfPasswordPrompts=3 -o TCPKeepAlive=no -o ServerAliveInterval=60 -o ServerAliveCountMax=1 $1 -L $2/127.0.0.1/3306
+}
