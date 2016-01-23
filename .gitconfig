@@ -1,6 +1,6 @@
 [user]
   name = Takatoshi Maeda
-  email = takatoshi-maeda@cookpad.com
+  email = me@tmd.tw
 [core]
   quotepath = false
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
