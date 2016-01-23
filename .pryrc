@@ -1,4 +1,4 @@
-require 'active_support/all'
+#require 'active_support/all'
 
 Pry.config.editor = "vim"
 Pry.config.commands.alias_command "em", "edit-method"
