@@ -41,7 +41,7 @@ nnoremap <Space><Space> :<C-u>Unite file_rec/git<CR>
 " let g:ctrlp_open_new_file       = 1   " 新規ファイル作成時にタブで開く
 
 " Git
-hi SignColumn guibg=0 ctermbg=0
+hi SignColumn guibg=Black ctermbg=Black
 NeoBundle "airblade/vim-gitgutter"
 let g:gitgutter_enabled = 1
 nnoremap <silent> gg :<C-u>GitGutterToggle<CR>

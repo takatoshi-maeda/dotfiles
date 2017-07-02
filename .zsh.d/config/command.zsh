@@ -90,14 +90,6 @@ install_default_gems() {
   fi
 }
 
-brew(){
-  if [ "$1" = "install" ] &&  [ "$2" = "" ]; then
-    ADDITIONAL_BREWFILE=middleware,ext_macapps brewdle --trace install $HOME/Brewfile
-    return
-  fi
-  /usr/local/bin/brew $*
-}
-
 p() { peco | while read LINE; do $@ $LINE; done }
 
 go_setup() {

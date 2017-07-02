@@ -23,6 +23,7 @@ au BufNewFile,BufRead Capfile      set filetype=ruby
 au BufNewFile,BufRead Gemfile      set filetype=ruby
 au BufNewFile,BufRead Guardfile,.Guardfile  set filetype=ruby
 au BufNewFile,BufRead Cheffile      set filetype=ruby
+au BufNewFile,BufRead Redashfile      set filetype=ruby
 au BufNewFile,BufRead Berksfile      set filetype=ruby
 au BufNewFile,BufRead [vV]agrantfile    set filetype=ruby
 au BufNewFile,BufRead .autotest      set filetype=ruby
