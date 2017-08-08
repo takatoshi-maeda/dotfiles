@@ -10,3 +10,6 @@ source '/Users/takatoshi-maeda/.gcp/google-cloud-sdk/path.zsh.inc'
 source '/Users/takatoshi-maeda/.gcp/google-cloud-sdk/completion.zsh.inc'
 export DISABLE_SPRING=1
 export PATH="/opt/brew/opt/imagemagick@6/bin:$PATH"
+
+# added by travis gem
+[ -f /Users/takatoshi-maeda/.travis/travis.sh ] && source /Users/takatoshi-maeda/.travis/travis.sh
