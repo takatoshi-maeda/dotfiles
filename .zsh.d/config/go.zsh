@@ -1,6 +1,6 @@
-if [ -x `which go` ]; then
-  export GO_VERSION=1.8
-  export GOROOT="/opt/brew/Cellar/go/$GO_VERSION/libexec"
-  export GOPATH=$HOME/.go/$GO_VERSION
+if type "go" > /dev/null 2>&1; then
+  export GOVERSION=$(go version | ruby -e "puts STDIN.read.split[2].gsub('go', '')")
+  export GOROOT="$HOME/.goenv/versions/$GOVERSION"
+  export GOPATH=$HOME/.go/$GOVERSION
   export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi

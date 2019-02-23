@@ -138,8 +138,6 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_space_tab_error = 1
 let g:go_highlight_operators = 1
 
-NeoBundle 'scrooloose/syntastic'
-
 " 置換
 NeoBundle 'osyo-manga/vim-over'
 
@@ -148,7 +146,6 @@ NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 
 NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'nginx.vim'
-NeoBundle 'scrooloose/syntastic'
 
 set runtimepath+=~/.vim/
 

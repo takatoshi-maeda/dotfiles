@@ -31,3 +31,7 @@ alias aws-exec="envchain aws"
 alias isucon-utils-extract="tar xvfz ~/.ghq/github.com/TakatoshiMaeda/isucon/misc/app_scripts/app_utilities.tar.gz -C ./"
 alias isucon-flag-template="cp ~/.ghq/github.com/TakatoshiMaeda/isucon/misc/app_templates/*.go ./"
 alias isucon-setup="cp -f ~/.ghq/github.com/TakatoshiMaeda/isucon/misc/app_scripts/*.sh* ./ && cp -f ~/.ghq/github.com/TakatoshiMaeda/isucon/misc/app_templates/*.go ./"
+
+alias fukajun='Notepad.exe'
+
+alias ecs='envchain aws-bargain ecs-scaler'

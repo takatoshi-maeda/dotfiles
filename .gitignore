@@ -10,3 +10,4 @@ doc/tags*
 .gitignore.local
 .vim/conf.d/override
 .bundle
+data/mecab-ipadic-neologd
