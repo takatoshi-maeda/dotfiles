@@ -16,24 +16,16 @@ if [ -e "$HOME/.zsh.d/config/override" ]; then
   rm $HOME/.zsh.d/config/override
 fi
 
-for brewfile in Brewfile*
-do
-  ln -fs "$PWD/$brewfile" "$HOME/$brewfile"
-done
-
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
 source ~/.zshrc
 
-go_setup
-
-brew install zsh
-brew install ghq
-brew install hub
-brew install direnv
-
 # Font Install
 if [ `uname -s` == 'Darwin' ]; then
+  brew install zsh
+  brew install ghq
+  brew install hub
+  brew install direnv
   if [ ! -e "$HOME/Library/Fonts/Consolas for Powerline.ttf" ]; then
     wget https://dl.dropboxusercontent.com/u/34772227/fonts.zip -O /tmp/fonts.zip
     unzip -o /tmp/fonts.zip -d /tmp/
